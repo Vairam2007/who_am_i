@@ -19,7 +19,7 @@ function App() {
 
       <main>
         <h1 className="title">Who Am I</h1>
-        <p className="subtitle">A React + Vite project by Karthick, Vikkranth, and Shanthost</p>
+        <p className="subtitle">A React + Vite project by</p>
 
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
@@ -32,7 +32,13 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Created with ❤️ by <strong>Karthick</strong>, <strong>Vikkranth</strong>, and <strong>Shanthost</strong></p>
+        <p>Created with innovation by
+           <strong>Karthick</strong>,
+            <strong>Vikraanth</strong>, 
+             <strong>Santhosh</strong>,
+            <strong>Logashree</strong> and
+            <strong>Safana</strong>
+             </p>
       </footer>
     </div>
   );

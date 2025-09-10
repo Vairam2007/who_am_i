@@ -36,6 +36,7 @@ function App() {
            <strong>Karthick</strong>,
             <strong>Vikraanth</strong>, 
              <strong>Santhosh</strong>,
+             <strong>Vairamuthu</strong>,
             <strong>Logashree</strong> and
             <strong>Safana</strong>
              </p>

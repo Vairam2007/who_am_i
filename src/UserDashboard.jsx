@@ -1,14 +1,43 @@
+// UserDashboard.jsx
 import React, { useState } from "react";
 
 const herbsData = [
-  { name: "Basil", description: "Aromatic herb commonly used in cooking.", image: "https://images.unsplash.com/photo-1617196031632-61b2b7fbd5f8?auto=format&fit=crop&w=400&q=80" },
-  { name: "Mint", description: "Refreshing herb great for beverages and desserts.", image: "https://images.unsplash.com/photo-1592928301108-cf54e8a8f5fa?auto=format&fit=crop&w=400&q=80" },
-  { name: "Rosemary", description: "Strong-scented herb, perfect for meats and oils.", image: "https://images.unsplash.com/photo-1623542923611-b5a78a45f93c?auto=format&fit=crop&w=400&q=80" },
-  { name: "Thyme", description: "Culinary and medicinal herb with a strong aroma.", image: "https://images.unsplash.com/photo-1608131645676-9b34fc3a3d2c?auto=format&fit=crop&w=400&q=80" },
-  { name: "Sage", description: "Culinary and medicinal herb with earthy flavor.", image: "https://images.unsplash.com/photo-1580584123123-58d0f1d0c5f6?auto=format&fit=crop&w=400&q=80" },
-  { name: "Chamomile", description: "Soothing herb used in teas for relaxation.", image: "https://images.unsplash.com/photo-1584270354949-5a6f0d4aebbb?auto=format&fit=crop&w=400&q=80" },
-  { name: "Lavender", description: "Fragrant herb used for aromatherapy and decoration.", image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" },
-  { name: "Parsley", description: "Popular culinary herb used for garnish and flavor.", image: "https://images.unsplash.com/photo-1616514800003-1d8dc87b9f28?auto=format&fit=crop&w=400&q=80" },
+  {
+    name: "siriyanangai",
+    description:
+      "Known for its powerful medicinal value in Siddha medicine, used to treat fever, cold, and liver disorders.",
+    image: "./2.jpg",
+  },
+  {
+    name: "ranakalli",
+    description:
+      "Traditionally used for wound healing and pain relief, also believed to help in reducing inflammation.",
+    image: "./3.jpg",
+  },
+  {
+    name: "insulin",
+    description:
+      "Medicinal plant used for managing diabetes, helps in regulating blood sugar levels naturally.",
+    image: "./4.jpg",
+  },
+  {
+    name: "tulsi",
+    description:
+      "Holy basil, sacred in India, known for boosting immunity, relieving stress, and curing respiratory issues.",
+    image: "./6.jpg",
+  },
+  {
+    name: "karpooravalli",
+    description:
+      "Aromatic herb used for cough, cold, asthma, and digestive problems; often taken as herbal tea.",
+    image: "./5.jpg",
+  },
+  {
+    name: "lemon grass",
+    description:
+      "Fragrant herb used in teas and soups, relieves stress, aids digestion, and repels mosquitoes.",
+    image: "./7.jpg",
+  },
 ];
 
 export default function UserDashboard() {
@@ -26,8 +55,8 @@ export default function UserDashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-gray-900 via-gray-950 to-gray-800 p-4">
       {/* Top Navigation */}
-      <div className="flex justify-between items-center mb-6 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-green-400">Herbal Dashboard</h1>
+      <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto w-full">
+        <h1 className="text-3xl font-bold text-green-400">🌿 Herbal Dashboard</h1>
         <div className="flex items-center gap-4">
           <span className="text-gray-300 font-medium">Hello, User</span>
           <button
@@ -40,7 +69,7 @@ export default function UserDashboard() {
       </div>
 
       {/* Search Bar */}
-      <div className="max-w-4xl mx-auto mb-6">
+      <div className="max-w-6xl mx-auto mb-6 w-full">
         <input
           type="text"
           placeholder="Search herbs..."
@@ -50,20 +79,22 @@ export default function UserDashboard() {
         />
       </div>
 
-      {/* Herbs List - each card full row */}
-      <div className="max-w-4xl mx-auto space-y-6">
+      {/* Herbs List - full width on laptop */}
+      <div className="max-w-6xl mx-auto space-y-6 w-full">
         {filteredHerbs.map((herb, index) => (
           <div
             key={index}
-            className="flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-5 hover:scale-105 transform transition-transform duration-300"
+            className="flex flex-col sm:flex-row items-center bg-gray-800 rounded-2xl shadow-xl p-5 hover:scale-[1.02] transform transition-transform duration-300 w-full"
           >
             <img
               src={herb.image}
               alt={herb.name}
-              className="w-full sm:w-48 h-48 object-cover rounded-xl mb-4 sm:mb-0 sm:mr-6 border-2 border-green-400"
+              className="w-full sm:w-64 h-64 object-cover rounded-xl mb-4 sm:mb-0 sm:mr-6 border-2 border-green-400"
             />
-            <div className="text-center sm:text-left">
-              <h2 className="text-2xl font-semibold text-green-300 mb-2">{herb.name}</h2>
+            <div className="text-center sm:text-left w-full">
+              <h2 className="text-2xl font-semibold text-green-300 mb-2">
+                {herb.name}
+              </h2>
               <p className="text-gray-300">{herb.description}</p>
             </div>
           </div>
